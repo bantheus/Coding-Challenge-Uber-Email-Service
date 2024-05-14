@@ -10,6 +10,7 @@ import com.amazonaws.services.simpleemail.model.Destination;
 import com.amazonaws.services.simpleemail.model.Message;
 import com.amazonaws.services.simpleemail.model.SendEmailRequest;
 import com.bantheus.emailservice.adapters.EmailSenderGateway;
+import com.bantheus.emailservice.core.exceptions.EmailServiceException;
 
 @Service
 public class SesEmailSender implements EmailSenderGateway {

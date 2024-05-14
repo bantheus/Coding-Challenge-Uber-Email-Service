@@ -1,8 +1,11 @@
 package com.bantheus.emailservice.application;
 
+import org.springframework.stereotype.Service;
+
 import com.bantheus.emailservice.adapters.EmailSenderGateway;
 import com.bantheus.emailservice.core.EmailSenderUseCase;
 
+@Service
 public class EmailSenderService implements EmailSenderUseCase {
 
   private final EmailSenderGateway emailSenderGateway;
