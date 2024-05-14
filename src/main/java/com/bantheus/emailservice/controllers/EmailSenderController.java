@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bantheus.emailservice.application.EmailSenderService;
+import com.bantheus.emailservice.core.EmailRequest;
 import com.bantheus.emailservice.core.exceptions.EmailServiceException;
 
 @RestController
