@@ -16,17 +16,15 @@ import com.bantheus.emailservice.core.exceptions.EmailServiceException;
 public class SesEmailSender implements EmailSenderGateway {
 
   private final AmazonSimpleEmailService amazonSimpleEmailService;
-  private final String sourceEmail;
 
   public SesEmailSender(AmazonSimpleEmailService amazonSimpleEmailService){
     this.amazonSimpleEmailService = amazonSimpleEmailService;
-    this.sourceEmail = System.getenv("SOURCE_EMAIL");
   }
 
   @Override
   public void sendEmail(String to, String subject, String body) {
     SendEmailRequest request = new SendEmailRequest()
-      .withSource(sourceEmail)
+      .withSource("bantheus.dev@gmail.com")
       .withDestination(new Destination().withToAddresses(to))
       .withMessage(new Message()
         .withSubject(new Content(subject))
